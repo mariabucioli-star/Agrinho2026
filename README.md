@@ -49,3 +49,10 @@ Agrinho2026/
 ## Hashtag
 
 #agrinho2026
+## Links do Projeto
+
+**Repositório GitHub:**
+https://github.com/mariabucioli-estrela/Agrinho2026
+
+**GitHub Pages:**
+https://mariabucioli-estrela.github.io/Agrinho2026/
