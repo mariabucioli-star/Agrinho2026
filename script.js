@@ -1,49 +1,67 @@
-// ===================================
-// BOTÃO "SAIBA MAIS" DO BANNER
-// ===================================
+// ===========================
+// BOTÕES "SAIBA MAIS"
+// ===========================
 
-const btnMensagem = document.getElementById("btnMensagem");
+function toggleElemento(botaoId, elementoId) {
 
-if (btnMensagem) {
+    const botao = document.getElementById(botaoId);
+    const elemento = document.getElementById(elementoId);
 
-    btnMensagem.addEventListener("click", function () {
+    if (!botao || !elemento) return;
 
-        const titulo = document.getElementById("tituloPrincipal");
-        const texto = document.getElementById("textoPrincipal");
+    botao.addEventListener("click", () => {
 
-        titulo.textContent = "🌱 Juntos por um futuro sustentável!";
-
-        texto.textContent =
-            "A tecnologia, a preservação ambiental e o agronegócio podem caminhar juntos para garantir alimentos, desenvolvimento e qualidade de vida para as futuras gerações.";
-
-    });
-
-}
-
-// ===================================
-// BOTÃO "SAIBA MAIS" DOS IMPACTOS
-// ===================================
-
-const botaoImpactos = document.getElementById("mostrarImpactos");
-const textoImpactos = document.getElementById("textoImpactos");
-
-if (textoImpactos) {
-    textoImpactos.style.display = "none";
-}
-
-if (botaoImpactos) {
-
-    botaoImpactos.addEventListener("click", function () {
-
-        if (textoImpactos.style.display === "none") {
-
-            textoImpactos.style.display = "block";
-            botaoImpactos.textContent = "Mostrar menos";
-
+        if (elemento.style.display === "block") {
+            elemento.style.display = "none";
         } else {
+            elemento.style.display = "block";
+        }
 
-            textoImpactos.style.display = "none";
-            botaoImpactos.textContent = "Saiba mais";
+    });
+
+}
+
+// Botões das seções
+toggleElemento("btnMensagem", "maisInformacoes");
+toggleElemento("btnIntroducao", "maisIntroducao");
+toggleElemento("btnImpactos", "maisImpactos");
+toggleElemento("btnSolucoes", "maisSolucoes");
+toggleElemento("btnBoasPraticas", "maisBoasPraticas");
+
+
+// ===========================
+// QUIZ
+// ===========================
+
+const btnQuiz = document.getElementById("btnQuiz");
+
+if (btnQuiz) {
+
+    btnQuiz.addEventListener("click", () => {
+
+        let pontos = 0;
+
+        const respostas = document.querySelectorAll("input[type='radio']:checked");
+
+        respostas.forEach((resposta) => {
+            pontos += Number(resposta.value);
+        });
+
+        const resultado = document.getElementById("resultadoQuiz");
+
+        if (resultado) {
+
+            let mensagem = "";
+
+            if (pontos <= 2) {
+                mensagem = `Você acertou ${pontos}/5 😢 Continue aprendendo sobre sustentabilidade!`;
+            } else if (pontos <= 4) {
+                mensagem = `Você acertou ${pontos}/5 🙂 Muito bom!`;
+            } else {
+                mensagem = `Você acertou ${pontos}/5 🌱 Excelente! Você entende bem sobre sustentabilidade!`;
+            }
+
+            resultado.innerText = mensagem;
 
         }
 
@@ -51,85 +69,86 @@ if (botaoImpactos) {
 
 }
 
-// ===================================
-// CONTADOR DE ÁRVORES
-// ===================================
 
-const contador = document.getElementById("contadorArvores");
-
-if (contador) {
-
-    let numero = 0;
-
-    const intervalo = setInterval(function () {
-
-        numero += 5;
-
-        contador.textContent = numero;
-
-        if (numero >= 100) {
-
-            clearInterval(intervalo);
-
-        }
-
-    }, 50);
-
-}
-
-// ===================================
+// ===========================
 // FORMULÁRIO
-// ===================================
+// ===========================
 
 const btnEnviar = document.getElementById("btnEnviar");
 
 if (btnEnviar) {
 
-    btnEnviar.addEventListener("click", function () {
+    btnEnviar.addEventListener("click", () => {
 
-        const nome = document.getElementById("nome").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const mensagem = document.getElementById("mensagem").value.trim();
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
 
-        if (nome === "" || email === "" || mensagem === "") {
-
-            alert("Preencha todos os campos antes de enviar.");
-
+        if (nome === "" || email === "") {
+            alert("Preencha todos os campos!");
             return;
-
         }
 
-        alert(
-            "Obrigado, " +
-            nome +
-            "! Sua mensagem foi enviada com sucesso."
-        );
+        const msg = document.getElementById("msgConfirmacao");
 
-        document.getElementById("nome").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("mensagem").value = "";
+        if (msg) {
+            msg.style.display = "block";
+        }
 
     });
 
 }
 
-// ===================================
-// ANIMAÇÃO DOS CARDS
-// ===================================
 
-const cards = document.querySelectorAll(".card");
+// ===========================
+// CONTADORES ANIMADOS
+// ===========================
 
-cards.forEach(function(card){
+function animarContador(id, final, sufixo = "") {
 
-    card.addEventListener("mouseenter", function(){
+    const elemento = document.getElementById(id);
+    if (!elemento) return;
 
-        card.style.transform = "translateY(-10px)";
+    let atual = 0;
 
-    });
+    const intervalo = setInterval(() => {
 
-    card.addEventListener("mouseleave", function(){
+        atual++;
 
-        card.style.transform = "translateY(0px)";
+        elemento.innerText = atual + sufixo;
+
+        if (atual >= final) {
+            clearInterval(intervalo);
+        }
+
+    }, 20);
+
+}
+
+
+// Iniciar contadores
+animarContador("contadorArvores", 500);
+animarContador("contadorAgua", 70, "%");
+animarContador("contadorSolo", 85, "%");
+animarContador("contadorCarbono", 60, "%");
+
+
+// ===========================
+// SCROLL SUAVE MENU
+// ===========================
+
+const links = document.querySelectorAll("a[href^='#']");
+
+links.forEach(link => {
+
+    link.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        const alvo = document.querySelector(this.getAttribute("href"));
+
+        if (alvo) {
+            alvo.scrollIntoView({ behavior: "smooth" });
+        }
 
     });
 
