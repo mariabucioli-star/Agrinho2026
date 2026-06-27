@@ -1,94 +1,201 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agro Forte | Futuro Sustentável</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="navbar">
-  <h1>🌱 Agro Forte</h1>
+<header>
 
-  <nav>
-    <a onclick="go('home')">Início</a>
-    <a onclick="go('sobre')">Sobre</a>
-    <a onclick="go('impactos')">Impactos</a>
-    <a onclick="go('solucoes')">Soluções</a>
-    <a onclick="go('quiz')">Quiz</a>
-    <a onclick="go('contato')">Contato</a>
-  </nav>
+    <h1>🌱 Agro Forte, Futuro Sustentável</h1>
+
+    <nav>
+
+        <a href="#agro">Agronegócio</a>
+        <a href="#problemas">Problemas</a>
+        <a href="#solucoes">Soluções</a>
+        <a href="#quiz">Quiz</a>
+
+    </nav>
+
 </header>
 
-<!-- HERO -->
-<section id="home" class="hero">
-  <div>
-    <h2>Agro forte, futuro sustentável</h2>
-    <p>Produção inteligente com respeito ao meio ambiente</p>
-    <button onclick="alert('Bem-vindo ao Agro Forte 🚜🌱')">Explorar projeto</button>
-  </div>
+<section class="banner">
+
+    <h2>Equilíbrio entre produção e meio ambiente</h2>
+
+    <p>
+        Produzir alimentos e preservar a natureza devem caminhar juntos.
+    </p>
+
+    <button id="saibaMais">Saiba Mais</button>
+
 </section>
 
-<!-- SOBRE -->
-<section id="sobre" class="section">
-  <h2>Sobre o Projeto</h2>
-  <p>
-    O Agro Forte representa a união entre tecnologia e agricultura sustentável,
-    promovendo equilíbrio entre produtividade e preservação ambiental.
-  </p>
+<main>
+
+<section id="agro">
+
+<h2>O Agronegócio no Brasil</h2>
+
+<p>
+
+O agronegócio é um dos principais pilares da economia brasileira. Esse setor gera milhões de empregos, movimenta a economia e garante alimentos para a população. Entretanto, o crescimento da produção também exige responsabilidade ambiental para preservar os recursos naturais e assegurar um futuro sustentável.
+
+</p>
+
 </section>
 
-<!-- IMPACTOS -->
-<section id="impactos" class="section dark">
-  <h2>Impactos do Uso Excessivo</h2>
+<section id="problemas">
 
-  <div class="grid">
-    <div class="card" onclick="toggle(this)">🌱 Solo degradado</div>
-    <div class="card" onclick="toggle(this)">💧 Água contaminada</div>
-    <div class="card" onclick="toggle(this)">🌍 Desequilíbrio ambiental</div>
-  </div>
+<h2>Os impactos dos agrotóxicos</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>🌱 Solo</h3>
+
+<p>
+
+O uso excessivo de agrotóxicos pode destruir micro-organismos importantes para a fertilidade do solo, causando degradação e perda da qualidade da terra.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>💧 Água</h3>
+
+<p>
+
+Os pesticidas podem contaminar rios e lençóis freáticos, prejudicando o meio ambiente e diversos seres vivos.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>❤️ Saúde</h3>
+
+<p>
+
+A exposição aos agrotóxicos pode provocar irritações, problemas respiratórios, distúrbios neurológicos e aumentar o risco de doenças graves.
+
+</p>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- SOLUÇÕES -->
-<section id="solucoes" class="section">
-  <h2>Soluções Sustentáveis</h2>
+<section id="solucoes">
 
-  <div class="grid">
-    <div class="card hover">☀️ Energia solar no campo</div>
-    <div class="card hover">🚜 Agricultura de precisão</div>
-    <div class="card hover">♻️ Reuso de recursos naturais</div>
-  </div>
+<h2>Soluções Sustentáveis</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>🌿 Agroecologia</h3>
+
+<p>
+Produção baseada no equilíbrio ambiental e no uso consciente dos recursos naturais.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🐞 Controle Biológico</h3>
+
+<p>
+Utilização de joaninhas, aves e outros predadores naturais para combater pragas.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🌾 Plantio Consorciado</h3>
+
+<p>
+Cultivar diferentes espécies juntas ajuda a reduzir a infestação de pragas.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🌱 Biofertilizantes</h3>
+
+<p>
+Fertilizantes naturais que reduzem os impactos ambientais e fortalecem o solo.
+</p>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- QUIZ -->
-<section id="quiz" class="section dark">
-  <h2>Quiz Sustentável 🌿</h2>
+<section id="quiz">
 
-  <p>Qual prática é mais sustentável?</p>
+<h2>Quiz</h2>
 
-  <button onclick="quiz(1)">Uso intenso de agrotóxicos</button>
-  <button onclick="quiz(2)">Agricultura orgânica</button>
-  <button onclick="quiz(3)">Queimadas controladas</button>
+<p>
 
-  <p id="resultado"></p>
+Qual destas práticas ajuda a diminuir o uso de agrotóxicos?
+
+</p>
+
+<button onclick="respostaCorreta()">
+Agroecologia
+</button>
+
+<button onclick="respostaErrada()">
+Queimadas
+</button>
+
+<button onclick="respostaErrada()">
+Desmatamento
+</button>
+
+<button onclick="respostaErrada()">
+Poluição
+</button>
+
+<p id="resultado"></p>
+
 </section>
 
-<!-- CONTATO -->
-<section id="contato" class="section">
-  <h2>Contato</h2>
-
-  <input id="nome" placeholder="Seu nome">
-  <button onclick="enviar()">Enviar mensagem</button>
-
-  <p id="msg"></p>
-</section>
+</main>
 
 <footer>
-  <p>© 2026 Agro Forte — Futuro Sustentável</p>
+
+<p>
+
+Projeto desenvolvido para o Concurso Agrinho 2026.
+
+</p>
+
+<p>
+
+#agrinho2026
+
+</p>
+
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
