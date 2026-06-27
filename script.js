@@ -1,81 +1,136 @@
-// ==========================================
-// Projeto Agrinho 2026
-// Funções JavaScript
-// ==========================================
+// ===================================
+// BOTÃO "SAIBA MAIS" DO BANNER
+// ===================================
 
-// Contador animado
-let contador = 0;
-const numero = document.getElementById("contadorArvores");
+const btnMensagem = document.getElementById("btnMensagem");
 
-function iniciarContador() {
-    const intervalo = setInterval(() => {
-        contador++;
+if (btnMensagem) {
 
-        if (numero) {
-            numero.textContent = contador;
-        }
+    btnMensagem.addEventListener("click", function () {
 
-        if (contador >= 100) {
-            clearInterval(intervalo);
-        }
+        const titulo = document.getElementById("tituloPrincipal");
+        const texto = document.getElementById("textoPrincipal");
 
-    }, 30);
-}
+        titulo.textContent = "🌱 Juntos por um futuro sustentável!";
 
-window.onload = iniciarContador;
-
-// ==========================================
-// Saudação personalizada
-// ==========================================
-
-const botaoEnviar = document.getElementById("btnEnviar");
-
-if (botaoEnviar) {
-
-    botaoEnviar.addEventListener("click", () => {
-
-        const nome = document.getElementById("nome").value;
-        const email = document.getElementById("email").value;
-
-        if (nome === "" || email === "") {
-
-            alert("Preencha nome e e-mail.");
-
-            return;
-
-        }
-
-        alert("Obrigado, " + nome + "! Sua mensagem foi enviada com sucesso.");
+        texto.textContent =
+            "A tecnologia, a preservação ambiental e o agronegócio podem caminhar juntos para garantir alimentos, desenvolvimento e qualidade de vida para as futuras gerações.";
 
     });
 
 }
 
-// ==========================================
-// Mostrar e esconder informações
-// ==========================================
+// ===================================
+// BOTÃO "SAIBA MAIS" DOS IMPACTOS
+// ===================================
 
-const botaoMostrar = document.getElementById("mostrarMais");
-const textoExtra = document.getElementById("textoExtra");
+const botaoImpactos = document.getElementById("mostrarImpactos");
+const textoImpactos = document.getElementById("textoImpactos");
 
-if(botaoMostrar && textoExtra){
+if (textoImpactos) {
+    textoImpactos.style.display = "none";
+}
 
-textoExtra.style.display="none";
+if (botaoImpactos) {
 
-botaoMostrar.addEventListener("click",()=>{
+    botaoImpactos.addEventListener("click", function () {
 
-if(textoExtra.style.display==="none"){
+        if (textoImpactos.style.display === "none") {
 
-textoExtra.style.display="block";
-botaoMostrar.textContent="Mostrar menos";
+            textoImpactos.style.display = "block";
+            botaoImpactos.textContent = "Mostrar menos";
 
-}else{
+        } else {
 
-textoExtra.style.display="none";
-botaoMostrar.textContent="Saiba mais";
+            textoImpactos.style.display = "none";
+            botaoImpactos.textContent = "Saiba mais";
+
+        }
+
+    });
 
 }
+
+// ===================================
+// CONTADOR DE ÁRVORES
+// ===================================
+
+const contador = document.getElementById("contadorArvores");
+
+if (contador) {
+
+    let numero = 0;
+
+    const intervalo = setInterval(function () {
+
+        numero += 5;
+
+        contador.textContent = numero;
+
+        if (numero >= 100) {
+
+            clearInterval(intervalo);
+
+        }
+
+    }, 50);
+
+}
+
+// ===================================
+// FORMULÁRIO
+// ===================================
+
+const btnEnviar = document.getElementById("btnEnviar");
+
+if (btnEnviar) {
+
+    btnEnviar.addEventListener("click", function () {
+
+        const nome = document.getElementById("nome").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const mensagem = document.getElementById("mensagem").value.trim();
+
+        if (nome === "" || email === "" || mensagem === "") {
+
+            alert("Preencha todos os campos antes de enviar.");
+
+            return;
+
+        }
+
+        alert(
+            "Obrigado, " +
+            nome +
+            "! Sua mensagem foi enviada com sucesso."
+        );
+
+        document.getElementById("nome").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("mensagem").value = "";
+
+    });
+
+}
+
+// ===================================
+// ANIMAÇÃO DOS CARDS
+// ===================================
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(function(card){
+
+    card.addEventListener("mouseenter", function(){
+
+        card.style.transform = "translateY(-10px)";
+
+    });
+
+    card.addEventListener("mouseleave", function(){
+
+        card.style.transform = "translateY(0px)";
+
+    });
 
 });
-
-}
