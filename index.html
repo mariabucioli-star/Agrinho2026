@@ -1,71 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head> <head>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #e8f5e9, #ffffff);
-            color: #1b5e20;
-        }
-
-        .logo {
-            background: #2e7d32;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-
-        .logo h1 {
-            margin: 0;
-            font-size: 34px;
-        }
-
-        .logo p {
-            margin-top: 10px;
-            opacity: 0.9;
-        }
-
-        section {
-            background: white;
-            max-width: 800px;
-            margin: 25px auto;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: #2e7d32;
-            border-left: 5px solid #66bb6a;
-            padding-left: 10px;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-    </style>
-</head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte, Futuro Sustentável | Mariabucioli</title>
+
+    <title>Agro Forte, Futuro Sustentável</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Cabeçalho -->
-    <header id="inicio">
+    <!-- MENU -->
 
-        <div class="logo">
-    <h1>🌱 Agro Forte, Futuro Sustentável</h1>
-    <p>Tecnologia, sustentabilidade e inovação no campo.</p>
-</div>
-<!-- Menu de navegação -->
-        <nav>
+    <header>
+
+        <nav class="menu">
+
+            <h1 class="logo">🌱 Agro Forte</h1>
 
             <ul>
 
@@ -77,6 +30,10 @@
 
                 <li><a href="#solucoes">Soluções</a></li>
 
+                <li><a href="#comparacao">Comparação</a></li>
+
+                <li><a href="#curiosidades">Curiosidades</a></li>
+
                 <li><a href="#contato">Contato</a></li>
 
             </ul>
@@ -85,9 +42,9 @@
 
     </header>
 
-    <!-- Banner Principal -->
+    <!-- BANNER -->
 
-    <section class="hero">
+    <section id="inicio" class="hero">
 
         <div class="hero-texto">
 
@@ -104,16 +61,14 @@
             </p>
 
             <button id="btnMensagem">
-
                 Saiba Mais
-
             </button>
 
         </div>
 
     </section>
 
-    <!-- Introdução -->
+    <!-- INTRODUÇÃO -->
 
     <section id="introducao">
 
@@ -121,23 +76,22 @@
 
         <p>
 
-            É notório o quanto o agronegócio é importante para a economia
-            brasileira. Esse setor é responsável por gerar empregos,
-            renda e produzir alimentos que abastecem milhões de pessoas.
+            O agronegócio é um dos pilares da economia brasileira,
+            responsável por gerar empregos, renda e produzir alimentos
+            para milhões de pessoas.
 
         </p>
 
         <p>
 
-            Entretanto, o crescimento da produção agrícola também exige
-            responsabilidade ambiental. O uso excessivo dos recursos naturais
-            e de produtos químicos pode causar impactos negativos ao meio
-            ambiente, tornando indispensável buscar o equilíbrio entre
-            produtividade e sustentabilidade.
+            Entretanto, o crescimento da produção agrícola deve ocorrer
+            de forma responsável. O uso consciente dos recursos naturais,
+            aliado à inovação e à tecnologia, permite produzir mais,
+            preservando o meio ambiente.
 
         </p>
 
-        <div class="informacoes">
+        <div class="cards">
 
             <div class="card">
 
@@ -145,8 +99,8 @@
 
                 <p>
 
-                    O agronegócio movimenta a economia brasileira e gera milhões
-                    de empregos diretos e indiretos.
+                    O agronegócio movimenta bilhões de reais todos os anos
+                    e fortalece diversos setores da economia brasileira.
 
                 </p>
 
@@ -158,8 +112,8 @@
 
                 <p>
 
-                    A preservação ambiental garante recursos naturais para
-                    as futuras gerações.
+                    Preservar os recursos naturais garante um futuro melhor
+                    para as próximas gerações.
 
                 </p>
 
@@ -171,8 +125,150 @@
 
                 <p>
 
-                    Produzir alimentos de forma consciente é o maior desafio
-                    da agricultura moderna.
+                    A agricultura moderna utiliza tecnologia para aumentar
+                    a produtividade e reduzir impactos ambientais.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- IMPACTOS -->
+
+    <section id="impactos">
+
+        <h2>Os impactos do uso excessivo de agrotóxicos</h2>
+
+        <p>
+            O agronegócio desempenha um papel fundamental na economia brasileira,
+            porém o uso excessivo de agrotóxicos pode causar sérios impactos ao
+            meio ambiente e à saúde da população.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>🌱 Solo</h3>
+
+                <p>
+                    Os pesticidas contaminam o solo, reduzem sua fertilidade
+                    natural e eliminam micro-organismos importantes para o
+                    desenvolvimento das plantas.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>💧 Água</h3>
+
+                <p>
+                    Os produtos químicos podem atingir rios, lagos e lençóis
+                    freáticos, prejudicando a qualidade da água e afetando a
+                    vida aquática.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>❤️ Saúde</h3>
+
+                <p>
+                    A exposição frequente aos agrotóxicos pode provocar
+                    problemas respiratórios, doenças neurológicas e outros
+                    riscos à saúde humana.
+                </p>
+
+            </div>
+
+        </div>
+
+        <button id="mostrarImpactos">
+            Saiba mais
+        </button>
+
+        <div id="textoImpactos">
+
+            <p>
+
+                Estudos mostram que o uso irresponsável desses produtos pode
+                contaminar o solo, provocar degradação ambiental, reduzir a
+                biodiversidade e comprometer a qualidade da água consumida
+                pela população.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- SOLUÇÕES -->
+
+    <section id="solucoes">
+
+        <h2>Soluções Sustentáveis</h2>
+
+        <p>
+
+            Existem diversas alternativas capazes de aumentar a produção de
+            alimentos preservando os recursos naturais e reduzindo os impactos
+            ambientais.
+
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>🌾 Plantio Consorciado</h3>
+
+                <p>
+
+                    O cultivo de diferentes espécies na mesma área reduz
+                    naturalmente o ataque de pragas e melhora a qualidade do solo.
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>🐞 Controle Biológico</h3>
+
+                <p>
+
+                    Utilização de inimigos naturais, como joaninhas e outros
+                    organismos, para combater pragas sem prejudicar o ambiente.
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>🍃 Biofertilizantes</h3>
+
+                <p>
+
+                    Fertilizantes naturais ajudam no desenvolvimento das plantas
+                    e diminuem a necessidade de produtos químicos.
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>♻ Agroecologia</h3>
+
+                <p>
+
+                    Modelo de produção agrícola baseado no equilíbrio entre
+                    economia, sociedade e meio ambiente.
 
                 </p>
 
@@ -182,280 +278,202 @@
 
     </section>
 
-    <!-- IMPACTOS DOS AGROTÓXICOS -->
+    <!-- COMPARAÇÃO -->
 
-<section id="impactos">
+    <section id="comparacao">
 
-    <h2>Os impactos do uso excessivo de agrotóxicos</h2>
+        <h2>Agricultura Tradicional × Agricultura Sustentável</h2>
 
-    <p>
-        O agronegócio desempenha um papel fundamental na economia brasileira,
-        porém o uso excessivo de agrotóxicos pode causar sérios impactos ao
-        meio ambiente e à saúde da população.
-    </p>
+        <table>
 
-    <div class="cards">
+            <thead>
 
-        <div class="card">
+                <tr>
 
-            <h3>🌱 Solo</h3>
+                    <th>Agricultura Tradicional</th>
 
-            <p>
-                Os pesticidas contaminam o solo, reduzem sua fertilidade
-                natural e eliminam micro-organismos importantes para o
-                desenvolvimento das plantas.
-            </p>
+                    <th>Agricultura Sustentável</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Uso intenso de agrotóxicos</td>
+
+                    <td>Controle biológico de pragas</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Maior impacto ambiental</td>
+
+                    <td>Preservação do solo e da água</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Alto consumo de recursos naturais</td>
+
+                    <td>Uso consciente da água</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Redução da biodiversidade</td>
+
+                    <td>Maior equilíbrio ambiental</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Produção focada apenas na quantidade</td>
+
+                    <td>Produção com responsabilidade ambiental</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+<!-- CURIOSIDADES -->
+
+    <section id="curiosidades">
+
+        <h2>Curiosidades sobre Sustentabilidade</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3 id="contadorArvores">0</h3>
+
+                <p>
+                    Árvores preservadas (contador em JavaScript)
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>70%</h3>
+
+                <p>
+                    Aproximadamente 70% da água doce utilizada no mundo
+                    é destinada à agricultura.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>100%</h3>
+
+                <p>
+                    Todos dependem de um meio ambiente equilibrado para
+                    garantir qualidade de vida.
+                </p>
+
+            </div>
 
         </div>
 
-        <div class="card">
+    </section>
 
-            <h3>💧 Água</h3>
+    <!-- CONTATO -->
 
-            <p>
-                Os produtos químicos podem atingir rios, lagos e lençóis
-                freáticos, prejudicando a qualidade da água.
-            </p>
+    <section id="contato">
 
-        </div>
+        <h2>Deixe sua opinião</h2>
 
-        <div class="card">
+        <form>
 
-            <h3>❤️ Saúde</h3>
+            <label for="nome">Nome</label>
 
-            <p>
-                O contato frequente com agrotóxicos pode causar problemas
-                respiratórios, doenças neurológicas e outros riscos à saúde.
-            </p>
+            <input
+                type="text"
+                id="nome"
+                placeholder="Digite seu nome"
+                required>
 
-        </div>
+            <label for="email">E-mail</label>
 
-    </div>
+            <input
+                type="email"
+                id="email"
+                placeholder="Digite seu e-mail"
+                required>
 
-    <button id="mostrarImpactos">
-        Saiba mais
-    </button>
+            <label for="mensagem">Mensagem</label>
 
-    <div id="textoImpactos">
+            <textarea
+                id="mensagem"
+                rows="6"
+                placeholder="Escreva sua opinião"></textarea>
+
+            <button
+                type="button"
+                id="btnEnviar">
+
+                Enviar
+
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- CONCLUSÃO -->
+
+    <section id="conclusao">
+
+        <h2>Conclusão</h2>
 
         <p>
 
-            Estudos mostram que o uso irresponsável desses produtos pode
-            contaminar o solo, provocar acidificação da terra e comprometer
-            a biodiversidade. A exposição prolongada também pode aumentar
-            o risco de diversas doenças.
+            O agronegócio é essencial para o desenvolvimento do Brasil,
+            porém seu crescimento deve ocorrer de forma responsável.
+
+            A utilização consciente dos recursos naturais, a adoção de
+            tecnologias sustentáveis e a preservação ambiental permitem
+            produzir alimentos com qualidade sem comprometer o futuro das
+            próximas gerações.
 
         </p>
 
-    </div>
+    </section>
 
-</section>
+    <!-- RODAPÉ -->
 
-<!-- SOLUÇÕES -->
+    <footer>
 
-<section id="solucoes">
+        <h3>🌱 Agro Forte, Futuro Sustentável</h3>
 
-    <h2>Soluções Sustentáveis</h2>
+        <p>
+            Projeto desenvolvido para o Concurso Agrinho 2026.
+        </p>
 
-    <p>
+        <p>
+            Desenvolvido por Mariabucioli
+        </p>
 
-        Existem alternativas que permitem produzir alimentos preservando
-        a natureza.
+        <p>
+            © 2026 - Todos os direitos reservados.
+        </p>
 
-    </p>
+    </footer>
 
-    <div class="cards">
-
-        <div class="card">
-
-            <h3>🌾 Plantio Consorciado</h3>
-
-            <p>
-
-                O cultivo de diferentes espécies reduz naturalmente o ataque
-                de pragas.
-
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <h3>🐞 Controle Biológico</h3>
-
-            <p>
-
-                Utilização de predadores naturais como joaninhas para combater
-                pragas.
-
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <h3>🍃 Biofertilizantes</h3>
-
-            <p>
-
-                Fertilizantes naturais diminuem o uso de produtos químicos.
-
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <h3>♻ Agroecologia</h3>
-
-            <p>
-
-                Produção agrícola baseada no equilíbrio entre natureza,
-                economia e sociedade.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- COMPARAÇÃO -->
-
-<section id="comparacao">
-
-<h2>Agricultura Tradicional × Agricultura Sustentável</h2>
-
-<table>
-
-<tr>
-
-<th>Tradicional</th>
-
-<th>Sustentável</th>
-
-</tr>
-
-<tr>
-
-<td>Uso intenso de agrotóxicos</td>
-
-<td>Controle biológico</td>
-
-</tr>
-
-<tr>
-
-<td>Maior impacto ambiental</td>
-
-<td>Preservação do solo</td>
-
-</tr>
-
-<tr>
-
-<td>Alto consumo de recursos</td>
-
-<td>Uso consciente da água</td>
-
-</tr>
-
-<tr>
-
-<td>Menor biodiversidade</td>
-
-<td>Maior equilíbrio ambiental</td>
-
-    <!-- CURIOSIDADES -->
-
-<section id="curiosidades">
-
-    <h2>Curiosidades sobre Sustentabilidade</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3 id="contadorArvores">0</h3>
-            <p>Árvores preservadas (contador em JavaScript)</p>
-        </div>
-
-        <div class="card">
-            <h3>70%</h3>
-            <p>Da água doce consumida no mundo é utilizada na agricultura.</p>
-        </div>
-
-        <div class="card">
-            <h3>100%</h3>
-            <p>Todos dependem de um meio ambiente saudável para viver.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- PARTICIPE -->
-
-<section id="contato">
-
-    <h2>Deixe sua opinião</h2>
-
-    <form>
-
-        <label for="nome">Nome</label>
-        <input type="text" id="nome" placeholder="Digite seu nome">
-
-        <label for="email">E-mail</label>
-        <input type="email" id="email" placeholder="Digite seu e-mail">
-
-        <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" rows="5" placeholder="Escreva sua opinião"></textarea>
-
-        <button type="button" id="btnEnviar">
-            Enviar
-        </button>
-
-    </form>
-
-</section>
-
-<!-- CONCLUSÃO -->
-
-<section id="conclusao">
-
-    <h2>Conclusão</h2>
-
-    <p>
-
-        O agronegócio é essencial para o desenvolvimento do Brasil, mas seu
-        crescimento precisa ocorrer de forma responsável. O uso consciente dos
-        recursos naturais, a redução dos impactos ambientais e a adoção de
-        práticas sustentáveis são fundamentais para garantir alimento,
-        desenvolvimento econômico e qualidade de vida para as futuras gerações.
-
-    </p>
-
-</section>
-
-<!-- RODAPÉ -->
-
-<footer>
-
-    <h3>Mariabucioli</h3>
-
-    <p>Projeto desenvolvido para o Concurso Agrinho 2026.</p>
-
-    <p>#agrinho2026</p>
-
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
-
-</tr>
-
-</table>
-
-</section>
