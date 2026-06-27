@@ -1,38 +1,46 @@
-/* RESET */
+/* ===========================
+   RESET
+=========================== */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
     scroll-behavior:smooth;
 }
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#f8f5eb;
+    background:#f5f7f2;
     color:#333;
     line-height:1.7;
 }
 
-/* MENU */
+/* ===========================
+   MENU
+=========================== */
 
 header{
-    background:#2e6b3d;
     position:fixed;
-    width:100%;
     top:0;
     left:0;
+    width:100%;
+    background:#2e7d32;
+    box-shadow:0 3px 12px rgba(0,0,0,.2);
     z-index:1000;
-    box-shadow:0 3px 10px rgba(0,0,0,.2);
 }
 
-nav{
+.menu{
     max-width:1200px;
     margin:auto;
+    padding:18px 30px;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px;
 }
 
 .logo{
@@ -41,176 +49,402 @@ nav{
     font-weight:bold;
 }
 
-nav ul{
-    display:flex;
+.menu ul{
     list-style:none;
+    display:flex;
     gap:25px;
 }
 
-nav a{
+.menu a{
     color:white;
     text-decoration:none;
     font-weight:bold;
     transition:.3s;
 }
 
-nav a:hover{
-    color:#ffd34d;
+.menu a:hover{
+    color:#ffe082;
 }
 
-/* BANNER */
+/* ===========================
+   HERO
+=========================== */
 
-#inicio{
+.hero{
+
     height:100vh;
-    background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-    url("img/agricultura.jpg");
-    background-size:cover;
-    background-position:center;
+
+    margin-top:80px;
 
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
 
+    background:
+    linear-gradient(rgba(0,0,0,.45),
+    rgba(0,0,0,.45)),
+    url("img/agricultura.jpg");
+
+    background-size:cover;
+    background-position:center;
+
     color:white;
+
 }
 
-.banner{
-    max-width:900px;
+.hero-texto{
+
+    max-width:850px;
+
+    padding:20px;
+
 }
 
-.banner h1{
-    font-size:60px;
+.hero h2{
+
+    font-size:55px;
+
     margin-bottom:20px;
+
 }
 
-.banner p{
+.hero p{
+
     font-size:22px;
+
     margin-bottom:35px;
+
 }
 
-.botao{
-    background:#4CAF50;
+.hero button{
+
+    background:#43a047;
+
     color:white;
-    padding:16px 35px;
-    border-radius:40px;
-    text-decoration:none;
-    font-weight:bold;
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:35px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
     transition:.3s;
+
 }
 
-.botao:hover{
+.hero button:hover{
+
     background:#2e7d32;
-    transform:scale(1.08);
+
+    transform:scale(1.05);
+
 }
 
-/* SEÇÕES */
+/* ===========================
+   SEÇÕES
+=========================== */
 
 section{
+
     padding:90px 10%;
+
 }
 
 section h2{
+
     text-align:center;
-    color:#2e6b3d;
+
+    color:#2e7d32;
+
     font-size:38px;
-    margin-bottom:40px;
+
+    margin-bottom:30px;
+
 }
 
-/* CARDS */
+section>p{
+
+    text-align:center;
+
+    max-width:900px;
+
+    margin:0 auto 40px auto;
+
+    font-size:18px;
+
+}
+/* ===========================
+   CARDS
+=========================== */
 
 .cards{
+
     display:grid;
+
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
     gap:30px;
+
+    margin-top:40px;
+
 }
 
 .card{
-    background:#fff;
-    border-radius:20px;
+
+    background:white;
+
     padding:25px;
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
-    transition:.4s;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+    transition:.3s;
+
     text-align:center;
+
 }
 
 .card:hover{
+
     transform:translateY(-10px);
-    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+    box-shadow:0 12px 28px rgba(0,0,0,.18);
+
 }
 
-.card img{
+.card h3{
+
+    color:#2e7d32;
+
+    margin-bottom:15px;
+
+    font-size:24px;
+
+}
+
+.card p{
+
+    font-size:16px;
+
+}
+
+/* ===========================
+   BOTÕES
+=========================== */
+
+button{
+
+    background:#2e7d32;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#43a047;
+
+}
+
+/* ===========================
+   TABELA
+=========================== */
+
+table{
+
     width:100%;
-    border-radius:15px;
-    margin-bottom:20px;
+
+    border-collapse:collapse;
+
+    margin-top:35px;
+
+    background:white;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
 }
 
-/* FORMULÁRIO */
+th{
+
+    background:#2e7d32;
+
+    color:white;
+
+    padding:18px;
+
+}
+
+td{
+
+    padding:16px;
+
+    border-bottom:1px solid #ddd;
+
+    text-align:center;
+
+}
+
+tr:nth-child(even){
+
+    background:#f3f3f3;
+
+}
+
+/* ===========================
+   FORMULÁRIO
+=========================== */
 
 form{
+
     max-width:700px;
+
     margin:auto;
+
     display:flex;
+
     flex-direction:column;
+
     gap:20px;
+
+}
+
+label{
+
+    font-weight:bold;
+
 }
 
 input,
 textarea{
+
     padding:15px;
+
     border-radius:10px;
+
     border:1px solid #ccc;
+
     font-size:16px;
+
 }
 
-button{
-    background:#2e6b3d;
-    color:#fff;
-    border:none;
-    padding:15px;
-    border-radius:10px;
-    font-size:18px;
-    cursor:pointer;
-    transition:.3s;
+textarea{
+
+    resize:vertical;
+
 }
 
-button:hover{
-    background:#4CAF50;
+form button{
+
+    margin-top:10px;
+
 }
 
-/* RODAPÉ */
+/* ===========================
+   RODAPÉ
+=========================== */
 
 footer{
-    background:#23492f;
+
+    background:#1b5e20;
+
     color:white;
+
     text-align:center;
-    padding:40px;
+
+    padding:40px 20px;
+
 }
 
-/* RESPONSIVO */
+footer h3{
 
-@media(max-width:768px){
+    margin-bottom:15px;
 
-nav{
-    flex-direction:column;
 }
 
-nav ul{
-    flex-direction:column;
-    margin-top:20px;
-    text-align:center;
+footer p{
+
+    margin:8px 0;
+
 }
 
-.banner h1{
-    font-size:38px;
-}
+/* ===========================
+   RESPONSIVO
+=========================== */
 
-.banner p{
-    font-size:18px;
-}
+@media (max-width:900px){
 
-section{
-    padding:70px 7%;
-}
+    .menu{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .menu ul{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .hero{
+
+        margin-top:140px;
+
+        height:auto;
+
+        padding:80px 20px;
+
+    }
+
+    .hero h2{
+
+        font-size:36px;
+
+    }
+
+    .hero p{
+
+        font-size:18px;
+
+    }
+
+    section{
+
+        padding:70px 7%;
+
+    }
+
+    table{
+
+        display:block;
+
+        overflow-x:auto;
+
+    }
 
 }
