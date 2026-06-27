@@ -1,39 +1,71 @@
-// SCROLL SUAVE
-function go(id) {
-  document.getElementById(id).scrollIntoView({
-    behavior: "smooth"
-  });
+/* ==========================================
+   AGRINHO 2026 - SCRIPT JS
+   Interatividade do site
+========================================== */
+
+/* ==========================
+   BOTÃO SAIBA MAIS
+========================== */
+
+const botaoSaibaMais = document.getElementById("saibaMais");
+
+botaoSaibaMais.addEventListener("click", function () {
+
+    document.getElementById("agro").scrollIntoView({
+        behavior: "smooth"
+    });
+
+});
+
+/* ==========================
+   CONTADOR DE ÁRVORES
+========================== */
+
+let contador = 0;
+
+function plantarArvore() {
+
+    contador++;
+
+    document.getElementById("contador").innerText = contador;
+
+    if (contador === 10) {
+        alert("🌳 Você já plantou 10 árvores virtuais! Continue contribuindo!");
+    }
+
+    if (contador === 50) {
+        alert("🎉 Parabéns! Você ajudou a construir um futuro sustentável!");
+    }
 }
 
-// TOGGLE CARDS
-function toggle(el) {
-  el.classList.toggle("active");
-  el.style.background = el.classList.contains("active")
-    ? "#b7f7c1"
-    : "white";
+/* ==========================
+   QUIZ
+========================== */
+
+function respostaCorreta() {
+
+    document.getElementById("resultado").innerText =
+        "✅ Correto! A agroecologia ajuda a reduzir o uso de agrotóxicos.";
+
 }
 
-// QUIZ
-function quiz(option) {
-  const res = document.getElementById("resultado");
+function respostaErrada() {
 
-  if (option === 2) {
-    res.innerHTML = "✅ Correto! Agricultura orgânica é a mais sustentável.";
-    res.style.color = "lightgreen";
-  } else {
-    res.innerHTML = "❌ Resposta incorreta. Tente novamente!";
-    res.style.color = "orange";
-  }
+    document.getElementById("resultado").innerText =
+        "❌ Resposta incorreta. Tente novamente!";
 }
 
-// FORMULÁRIO
-function enviar() {
-  const nome = document.getElementById("nome").value;
-  const msg = document.getElementById("msg");
+/* ==========================
+   EQUILÍBRIO PRODUÇÃO x NATUREZA
+========================== */
 
-  if (nome.trim() === "") {
-    msg.innerHTML = "Digite seu nome.";
-  } else {
-    msg.innerHTML = `Mensagem enviada com sucesso, ${nome}! 🌱`;
-  }
-}
+const botaoEquilibrio = document.getElementById("equilibrar");
+
+botaoEquilibrio.addEventListener("click", function () {
+
+    document.getElementById("producao").value = 90;
+    document.getElementById("natureza").value = 90;
+
+    document.getElementById("mensagemEquilibrio").innerText =
+        "🌍 Quando produção e natureza caminham juntas, todos ganham!";
+});
