@@ -1,272 +1,94 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agro Forte, Futuro Sustentável</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agro Forte | Futuro Sustentável</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- ========== NAVEGAÇÃO ========== -->
-  <nav id="navbar">
-    <div class="nav-brand">
-      <span class="nav-icon">🌿</span>
-      <span class="nav-title">Agro Forte</span>
-    </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#inicio" class="nav-link">Início</a></li>
-      <li><a href="#introducao" class="nav-link">Introdução</a></li>
-      <li><a href="#impactos" class="nav-link">Impactos</a></li>
-      <li><a href="#solucoes" class="nav-link">Soluções</a></li>
-      <li><a href="#quiz" class="nav-link">Quiz</a></li>
-      <li><a href="#contato" class="nav-link">Contato</a></li>
-    </ul>
-    <button id="darkToggle" class="dark-toggle" aria-label="Alternar modo escuro">🌙</button>
+<header class="navbar">
+  <h1>🌱 Agro Forte</h1>
+
+  <nav>
+    <a onclick="go('home')">Início</a>
+    <a onclick="go('sobre')">Sobre</a>
+    <a onclick="go('impactos')">Impactos</a>
+    <a onclick="go('solucoes')">Soluções</a>
+    <a onclick="go('quiz')">Quiz</a>
+    <a onclick="go('contato')">Contato</a>
   </nav>
+</header>
 
-  <!-- ========== HERO ========== -->
-  <section id="inicio" class="hero">
-    <div class="hero-content">
-      <p class="hero-eyebrow">Concurso Agrinho 2026</p>
-      <h1 class="hero-title">
-        Agro Forte,<br />
-        <span class="hero-highlight">Futuro Sustentável</span>
-      </h1>
-      <p class="hero-subtitle">
-        Equilíbrio entre produção e meio ambiente:<br />
-        tecnologia, sustentabilidade e inovação no campo.
-      </p>
-      <div class="hero-stats">
-        <div class="stat-card">
-          <span class="stat-number" data-target="33">0</span><span class="stat-unit">%</span>
-          <p class="stat-label">do PIB brasileiro vem do agro</p>
-        </div>
-        <div class="stat-card">
-          <span class="stat-number" data-target="19">0</span><span class="stat-unit">M</span>
-          <p class="stat-label">de empregos gerados</p>
-        </div>
-        <div class="stat-card">
-          <span class="stat-number" data-target="70">0</span><span class="stat-unit">%</span>
-          <p class="stat-label">dos alimentos no prato do brasileiro</p>
-        </div>
-      </div>
-      <a href="#introducao" class="btn-primary">Explorar o tema ↓</a>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-illustration">
-        <div class="field-layer layer-sky"></div>
-        <div class="field-layer layer-hills"></div>
-        <div class="field-layer layer-crops">
-          <span class="crop" style="--d:0s">🌾</span>
-          <span class="crop" style="--d:.2s">🌽</span>
-          <span class="crop" style="--d:.4s">🌿</span>
-          <span class="crop" style="--d:.6s">🌾</span>
-          <span class="crop" style="--d:.8s">🌱</span>
-          <span class="crop" style="--d:1s">🌻</span>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- HERO -->
+<section id="home" class="hero">
+  <div>
+    <h2>Agro forte, futuro sustentável</h2>
+    <p>Produção inteligente com respeito ao meio ambiente</p>
+    <button onclick="alert('Bem-vindo ao Agro Forte 🚜🌱')">Explorar projeto</button>
+  </div>
+</section>
 
-  <!-- ========== INTRODUÇÃO ========== -->
-  <section id="introducao" class="section">
-    <div class="container">
-      <span class="section-eyebrow">Contexto</span>
-      <h2 class="section-title">O agronegócio e seus desafios</h2>
-      <div class="intro-grid">
-        <div class="intro-text">
-          <p>É notório o quanto o agronegócio é importante para a economia brasileira. Este setor é responsável por gerar empregos, rendas e a produção de alimentos. Porém, é inegável que o excesso causa danos ao meio ambiente — com o consumo excessivo de insumos, a degradação ambiental se torna cada vez mais aparente, tornando necessário o equilíbrio entre produção e sustentabilidade.</p>
-          <p>Diante desse cenário, surge o desafio de manter a força produtiva do Brasil sem comprometer os recursos naturais para as gerações futuras.</p>
-        </div>
-        <div class="intro-cards">
-          <div class="info-card card-green">
-            <span class="card-icon">🌱</span>
-            <div><h3>Sustentabilidade</h3><p>Produzir de forma responsável, preservando solo, água e biodiversidade.</p></div>
-          </div>
-          <div class="info-card card-yellow">
-            <span class="card-icon">⚙️</span>
-            <div><h3>Inovação</h3><p>Tecnologia a serviço do campo: drones, sensores e agricultura de precisão.</p></div>
-          </div>
-          <div class="info-card card-earth">
-            <span class="card-icon">🤝</span>
-            <div><h3>Equilíbrio</h3><p>Aliar alta produtividade com respeito ao meio ambiente e à saúde humana.</p></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- SOBRE -->
+<section id="sobre" class="section">
+  <h2>Sobre o Projeto</h2>
+  <p>
+    O Agro Forte representa a união entre tecnologia e agricultura sustentável,
+    promovendo equilíbrio entre produtividade e preservação ambiental.
+  </p>
+</section>
 
-  <!-- ========== IMPACTOS ========== -->
-  <section id="impactos" class="section section-alt">
-    <div class="container">
-      <span class="section-eyebrow">Problema</span>
-      <h2 class="section-title">Os impactos dos agrotóxicos</h2>
-      <div class="tabs">
-        <button class="tab-btn active" data-tab="solo">🌍 Solo</button>
-        <button class="tab-btn" data-tab="saude">🫁 Saúde Humana</button>
-        <button class="tab-btn" data-tab="biodiversidade">🐝 Biodiversidade</button>
-      </div>
+<!-- IMPACTOS -->
+<section id="impactos" class="section dark">
+  <h2>Impactos do Uso Excessivo</h2>
 
-      <div class="tab-content active" id="tab-solo">
-        <div class="impact-layout">
-          <div class="impact-text">
-            <h3>Degradação do solo</h3>
-            <p>O uso irresponsável de pesticidas pode infectar o solo, destruindo micro-organismos essenciais que mantêm a fertilidade natural. A consequência direta é a <strong>compactação e acidificação da terra</strong>.</p>
-            <ul class="impact-list">
-              <li>Destruição de micro-organismos benéficos</li>
-              <li>Redução da fertilidade natural</li>
-              <li>Compactação e erosão do solo</li>
-              <li>Contaminação de lençóis freáticos</li>
-            </ul>
-          </div>
-          <div class="impact-visual">
-            <div class="soil-diagram">
-              <div class="soil-layer healthy"><span>Solo Saudável</span><div class="microbes">🦠🐛🌿🦎</div></div>
-              <div class="soil-layer degraded"><span>Solo Degradado</span><div class="microbes muted">💀🪨🏜️</div></div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="grid">
+    <div class="card" onclick="toggle(this)">🌱 Solo degradado</div>
+    <div class="card" onclick="toggle(this)">💧 Água contaminada</div>
+    <div class="card" onclick="toggle(this)">🌍 Desequilíbrio ambiental</div>
+  </div>
+</section>
 
-      <div class="tab-content" id="tab-saude">
-        <div class="impact-layout">
-          <div class="impact-text">
-            <h3>Riscos à saúde humana</h3>
-            <p>Os agrotóxicos apresentam risco significativo à saúde em dois níveis de exposição:</p>
-            <div class="exposure-cards">
-              <div class="exposure-card acute"><h4>⚡ Exposição Aguda</h4><p>Curto prazo: problemas respiratórios, irritações na pele e mucosas, distúrbios digestivos.</p></div>
-              <div class="exposure-card chronic"><h4>⏳ Exposição Crônica</h4><p>Longo prazo: câncer, distúrbios neurológicos, danos aos órgãos vitais.</p></div>
-            </div>
-          </div>
-          <div class="impact-visual center-visual">
-            <div class="health-icon">⚕️</div>
-            <p class="visual-caption">O Brasil é um dos maiores consumidores de agrotóxicos do mundo</p>
-          </div>
-        </div>
-      </div>
+<!-- SOLUÇÕES -->
+<section id="solucoes" class="section">
+  <h2>Soluções Sustentáveis</h2>
 
-      <div class="tab-content" id="tab-biodiversidade">
-        <div class="impact-layout">
-          <div class="impact-text">
-            <h3>Perda de biodiversidade</h3>
-            <p>Os agroquímicos não atingem apenas pragas-alvo. Abelhas, pássaros e anfíbios essenciais são dizimados, comprometendo o equilíbrio dos ecossistemas.</p>
-            <ul class="impact-list">
-              <li>Morte de polinizadores como abelhas e borboletas</li>
-              <li>Contaminação de rios e fauna aquática</li>
-              <li>Ruptura de cadeias alimentares</li>
-              <li>Extinção de espécies nativas</li>
-            </ul>
-          </div>
-          <div class="impact-visual center-visual">
-            <div class="bee-animation">🐝</div>
-            <p class="visual-caption">30% das espécies de abelhas estão em risco de extinção</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="grid">
+    <div class="card hover">☀️ Energia solar no campo</div>
+    <div class="card hover">🚜 Agricultura de precisão</div>
+    <div class="card hover">♻️ Reuso de recursos naturais</div>
+  </div>
+</section>
 
-  <!-- ========== SOLUÇÕES ========== -->
-  <section id="solucoes" class="section">
-    <div class="container">
-      <span class="section-eyebrow">Caminhos</span>
-      <h2 class="section-title">Soluções sustentáveis para o campo</h2>
-      <p class="section-subtitle">A agroecologia e a tecnologia oferecem alternativas reais para reduzir o uso de agroquímicos sem perder produtividade.</p>
-      <div class="solutions-grid">
-        <div class="solution-card" tabindex="0"><div class="solution-icon">🌾</div><h3>Plantio Consorciado</h3><p>Cultivo de linhagens diferentes juntas, dificultando a infestação de pragas de forma natural.</p><span class="solution-tag">Agroecologia</span></div>
-        <div class="solution-card" tabindex="0"><div class="solution-icon">🐞</div><h3>Controle Biológico</h3><p>Estimula predadores naturais — como joaninhas e pássaros — para combater pragas sem veneno.</p><span class="solution-tag">Biodiversidade</span></div>
-        <div class="solution-card" tabindex="0"><div class="solution-icon">🧪</div><h3>Biofertilizantes</h3><p>Extratos vegetais e compostos orgânicos que nutrem o solo sem contaminar o ambiente.</p><span class="solution-tag">Inovação</span></div>
-        <div class="solution-card" tabindex="0"><div class="solution-icon">🛰️</div><h3>Agricultura de Precisão</h3><p>Drones e sensores aplicam insumos apenas onde necessário, reduzindo desperdício.</p><span class="solution-tag">Tecnologia</span></div>
-        <div class="solution-card" tabindex="0"><div class="solution-icon">💧</div><h3>Irrigação Inteligente</h3><p>Sistemas que monitoram a umidade do solo e irrigam somente quando necessário.</p><span class="solution-tag">Tecnologia</span></div>
-        <div class="solution-card" tabindex="0"><div class="solution-icon">🔄</div><h3>Rotação de Culturas</h3><p>Alternância de culturas que regenera o solo e quebra ciclos de pragas naturalmente.</p><span class="solution-tag">Agroecologia</span></div>
-      </div>
-    </div>
-  </section>
+<!-- QUIZ -->
+<section id="quiz" class="section dark">
+  <h2>Quiz Sustentável 🌿</h2>
 
-  <!-- ========== QUIZ ========== -->
-  <section id="quiz" class="section section-alt">
-    <div class="container">
-      <span class="section-eyebrow">Interativo</span>
-      <h2 class="section-title">Teste seus conhecimentos!</h2>
-      <p class="section-subtitle">Responda às perguntas sobre sustentabilidade no campo.</p>
-      <div class="quiz-box">
-        <div class="quiz-progress">
-          <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-          <span id="progressText">Pergunta 1 de 5</span>
-        </div>
-        <div id="quizArea">
-          <p class="quiz-question" id="quizQuestion"></p>
-          <div class="quiz-options" id="quizOptions"></div>
-          <p class="quiz-feedback" id="quizFeedback"></p>
-          <button class="btn-primary" id="nextBtn" style="display:none">Próxima →</button>
-        </div>
-        <div id="quizResult" style="display:none">
-          <div class="result-icon" id="resultIcon"></div>
-          <h3 id="resultTitle"></h3>
-          <p id="resultMsg"></p>
-          <p class="result-score">Você acertou <strong id="scoreDisplay"></strong> de 5 perguntas!</p>
-          <button class="btn-primary" id="restartBtn">Tentar novamente 🔄</button>
-        </div>
-      </div>
-    </div>
-  </section>
+  <p>Qual prática é mais sustentável?</p>
 
-  <!-- ========== CONCLUSÃO ========== -->
-  <section class="section conclusion-section">
-    <div class="container">
-      <blockquote class="conclusion-quote">
-        "Cabe ao Ministério da Agricultura, em conjunto com o Ministério da Saúde e o Ibama, criar campanhas informativas para conscientizar a população. O equilíbrio econômico da agricultura com a preservação da saúde ambiental é possível — e necessário."
-      </blockquote>
-    </div>
-  </section>
+  <button onclick="quiz(1)">Uso intenso de agrotóxicos</button>
+  <button onclick="quiz(2)">Agricultura orgânica</button>
+  <button onclick="quiz(3)">Queimadas controladas</button>
 
-  <!-- ========== CONTATO ========== -->
-  <section id="contato" class="section">
-    <div class="container">
-      <span class="section-eyebrow">Fale conosco</span>
-      <h2 class="section-title">Entre em contato</h2>
-      <div class="contact-layout">
-        <div class="contact-info">
-          <p>Este projeto foi desenvolvido para o <strong>Concurso Agrinho 2026</strong>, com o tema <em>"Agro Forte, Futuro Sustentável"</em>.</p>
-          <p>📧 Dúvidas ou sugestões? Use o formulário ao lado.</p>
-          <div class="contact-tags">
-            <span class="tag">#agrinho2026</span>
-            <span class="tag">#agrofuturosustentavel</span>
-            <span class="tag">#sustentabilidade</span>
-          </div>
-        </div>
-        <form class="contact-form" id="contactForm" novalidate>
-          <div class="form-group">
-            <label for="userName">Seu nome</label>
-            <input type="text" id="userName" name="userName" placeholder="Digite seu nome" required />
-          </div>
-          <div class="form-group">
-            <label for="userEmail">E-mail</label>
-            <input type="email" id="userEmail" name="userEmail" placeholder="Digite seu e-mail" required />
-          </div>
-          <div class="form-group">
-            <label for="userMessage">Mensagem</label>
-            <textarea id="userMessage" name="userMessage" rows="4" placeholder="Sua mensagem..." required></textarea>
-          </div>
-          <button type="button" class="btn-primary" id="submitContact">Enviar mensagem 🌿</button>
-          <p class="form-feedback" id="formFeedback"></p>
-        </form>
-      </div>
-    </div>
-  </section>
+  <p id="resultado"></p>
+</section>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>🌿 <strong>Agro Forte, Futuro Sustentável</strong> — Agrinho 2026</p>
-      <p class="footer-sub">Desenvolvido com HTML, CSS e JavaScript · Maria Bucioli</p>
-    </div>
-  </footer>
+<!-- CONTATO -->
+<section id="contato" class="section">
+  <h2>Contato</h2>
 
-  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
-  <script src="js/main.js"></script>
+  <input id="nome" placeholder="Seu nome">
+  <button onclick="enviar()">Enviar mensagem</button>
+
+  <p id="msg"></p>
+</section>
+
+<footer>
+  <p>© 2026 Agro Forte — Futuro Sustentável</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
