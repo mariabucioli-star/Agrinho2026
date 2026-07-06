@@ -1,71 +1,101 @@
-/* ==========================================
-   AGRINHO 2026 - SCRIPT JS
-   Interatividade do site
-========================================== */
-
-/* ==========================
-   BOTÃO SAIBA MAIS
-========================== */
+// ===== BOTÃO SAIBA MAIS =====
 
 const botaoSaibaMais = document.getElementById("saibaMais");
 
-botaoSaibaMais.addEventListener("click", function () {
+if (botaoSaibaMais) {
 
-    document.getElementById("agro").scrollIntoView({
-        behavior: "smooth"
+    botaoSaibaMais.addEventListener("click", function () {
+
+        document.getElementById("textoExtra").innerHTML =
+        "A sustentabilidade no agronegócio busca aumentar a produção de alimentos sem comprometer os recursos naturais, garantindo qualidade de vida para as futuras gerações.";
+
     });
 
-});
+}
 
-/* ==========================
-   CONTADOR DE ÁRVORES
-========================== */
+// ===== EQUILÍBRIO =====
 
-let contador = 0;
+const botaoEquilibrar = document.getElementById("equilibrar");
+
+if (botaoEquilibrar) {
+
+    botaoEquilibrar.addEventListener("click", function () {
+
+        document.getElementById("producao").value = 85;
+
+        document.getElementById("natureza").value = 85;
+
+        document.getElementById("mensagemEquilibrio").innerHTML =
+        "✅ Produção agrícola e preservação ambiental podem caminhar juntas.";
+
+    });
+
+}
+
+// ===== CONTADOR DE ÁRVORES =====
+
+let totalArvores = 0;
 
 function plantarArvore() {
 
-    contador++;
+    totalArvores++;
 
-    document.getElementById("contador").innerText = contador;
+    document.getElementById("contador").innerHTML = totalArvores;
 
-    if (contador === 10) {
-        alert("🌳 Você já plantou 10 árvores virtuais! Continue contribuindo!");
-    }
-
-    if (contador === 50) {
-        alert("🎉 Parabéns! Você ajudou a construir um futuro sustentável!");
-    }
 }
 
-/* ==========================
-   QUIZ
-========================== */
+// ===== QUIZ 1 =====
 
 function respostaCorreta() {
 
-    document.getElementById("resultado").innerText =
-        "✅ Correto! A agroecologia ajuda a reduzir o uso de agrotóxicos.";
+    document.getElementById("resultado").innerHTML =
+    "✅ Correto! A agroecologia reduz a dependência de agrotóxicos.";
 
 }
 
 function respostaErrada() {
 
-    document.getElementById("resultado").innerText =
-        "❌ Resposta incorreta. Tente novamente!";
+    document.getElementById("resultado").innerHTML =
+    "❌ Resposta incorreta. Tente novamente.";
+
 }
 
-/* ==========================
-   EQUILÍBRIO PRODUÇÃO x NATUREZA
-========================== */
+// ===== QUIZ 2 =====
 
-const botaoEquilibrio = document.getElementById("equilibrar");
+function respostaCorreta2() {
 
-botaoEquilibrio.addEventListener("click", function () {
+    document.getElementById("resultado2").innerHTML =
+    "✅ Correto! O plantio consorciado melhora o solo e ajuda no controle de pragas.";
 
-    document.getElementById("producao").value = 90;
-    document.getElementById("natureza").value = 90;
+}
 
-    document.getElementById("mensagemEquilibrio").innerText =
-        "🌍 Quando produção e natureza caminham juntas, todos ganham!";
-});
+function respostaErrada2() {
+
+    document.getElementById("resultado2").innerHTML =
+    "❌ Resposta incorreta.";
+
+}
+
+// ===== QUIZ 3 =====
+
+function respostaCorreta3() {
+
+    document.getElementById("resultado3").innerHTML =
+    "✅ Correto! A água é essencial para a agricultura.";
+
+}
+
+function respostaErrada3() {
+
+    document.getElementById("resultado3").innerHTML =
+    "❌ Resposta incorreta.";
+
+}
+
+// ===== MENSAGEM DE BOAS-VINDAS =====
+
+window.onload = function () {
+
+    console.log("Projeto Agrinho 2026 carregado com sucesso.");
+
+};
