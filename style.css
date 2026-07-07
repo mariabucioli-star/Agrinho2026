@@ -309,3 +309,28 @@ section h2{
 }
 
 }
+/*
+
+================ EXPLICAÇÃO DO CSS ================
+
+Este arquivo é responsável pela aparência do site.
+
+Funções principais:
+
+- Reset (*) remove margens e espaçamentos padrão.
+- body define fonte, cores e fundo.
+- header estiliza o cabeçalho.
+- nav organiza o menu de navegação.
+- section cria caixas organizadas para cada assunto.
+- .cards utiliza Flexbox para organizar os cartões.
+- .card estiliza cada cartão.
+- button define a aparência dos botões.
+- :hover cria animações ao passar o mouse.
+- progress estiliza as barras de progresso.
+- footer personaliza o rodapé.
+- @media torna o site responsivo para celulares e tablets.
+
+Objetivo:
+Deixar o site bonito, organizado, moderno e responsivo em diferentes tamanhos de tela.
+
+*/
