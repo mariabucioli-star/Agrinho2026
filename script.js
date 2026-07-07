@@ -99,3 +99,30 @@ window.onload = function () {
     console.log("Projeto Agrinho 2026 carregado com sucesso.");
 
 };
+/*
+
+================ EXPLICAÇÃO DO JAVASCRIPT ================
+
+Este arquivo adiciona interatividade ao site.
+
+Funções desenvolvidas:
+
+- Saiba Mais:
+Exibe um texto adicional quando o botão é clicado.
+
+- Buscar Equilíbrio:
+Atualiza as barras de progresso e mostra uma mensagem indicando que é possível produzir alimentos preservando o meio ambiente.
+
+- Plantar Árvore:
+Conta quantas árvores foram plantadas simbolicamente pelo usuário.
+
+- Quiz:
+Verifica se a resposta escolhida está correta ou incorreta e exibe o resultado na tela.
+
+- window.onload:
+Executa uma mensagem quando a página termina de carregar.
+
+Objetivo:
+Demonstrar o uso do JavaScript manipulando elementos HTML (DOM), tornando a página dinâmica e interativa.
+
+*/
