@@ -20,9 +20,6 @@ header{
     color:white;
     text-align:center;
     padding:25px;
-    position:sticky;
-    top:0;
-    z-index:1000;
 }
 
 header h1{
@@ -77,6 +74,7 @@ section h2{
 section p{
     margin-bottom:15px;
 }
+
 /* ===== CARDS ===== */
 
 .cards{
@@ -105,7 +103,6 @@ section p{
     color:#2e7d32;
     margin-bottom:12px;
 }
-
 /* ===== BOTÕES ===== */
 
 button{
@@ -181,6 +178,7 @@ footer h3{
 footer p{
     margin:8px 0;
 }
+
 /* ===== LISTAS ===== */
 
 ul,
@@ -206,7 +204,6 @@ dd{
     margin-left:20px;
     margin-bottom:12px;
 }
-
 /* ===== CITAÇÕES ===== */
 
 blockquote{
@@ -289,7 +286,6 @@ button{
 }
 
 }
-
 @media (max-width:480px){
 
 body{
@@ -309,6 +305,7 @@ section h2{
 }
 
 }
+
 /*
 
 ================ EXPLICAÇÃO DO CSS ================
