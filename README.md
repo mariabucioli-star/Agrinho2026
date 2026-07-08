@@ -27,9 +27,9 @@ O agronegócio é essencial para o Brasil, pois gera empregos, renda e alimentos
 
 ## 💻 Tecnologias utilizadas
 
-- HTML5  
-- CSS3  
-- JavaScript (Vanilla)
+- HTML  
+- CSS  
+- JavaScript
 
 ---
 
